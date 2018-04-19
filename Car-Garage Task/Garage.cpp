@@ -8,7 +8,7 @@
 
 void Garage::Copy(const Garage &g) {
     this->name = new char[strlen(g.name) + 1];
-    strcpy(this->name, name);
+    strcpy(this->name, g.name);
     capacity = g.capacity;
     current = g.current;
     cars = new Car[capacity];
