@@ -14,8 +14,12 @@ void WildAnimal::print(std::ostream &os) const {
     os << " " << dangerRating;
 }
 
-bool WildAnimal::tameable() {
-    return dangerRating < 5;
+DomesticAnimal WildAnimal::tame(const char* name) const {
+    if(dangerRating < 5){
+        return DomesticAnimal(getRegion(), getGender(), getWeight(), getAge(), name);
+    }
+    std::cout << "Too dangerous!" << std::endl;
+    return DomesticAnimal();
 }
 
 std::ostream &operator<<(std::ostream &os, const WildAnimal &wa) {

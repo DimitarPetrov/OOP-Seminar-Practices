@@ -15,7 +15,7 @@ private:
     void Copy(const DomesticAnimal& da);
     void Erase();
     void print(std::ostream& os) const;
-    
+
 public:
     DomesticAnimal();
     DomesticAnimal(const char* region, char gender, double weight, int age, const char* name);
@@ -23,7 +23,7 @@ public:
     DomesticAnimal& operator=(const DomesticAnimal& da);
     void feed();
     ~DomesticAnimal();
-    
+
     friend std::ostream& operator<<(std::ostream& os, const DomesticAnimal& da);
 
 };

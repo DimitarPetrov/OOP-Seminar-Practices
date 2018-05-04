@@ -15,6 +15,8 @@ void DomesticAnimal::Erase() {
     delete[] name;
 }
 
+DomesticAnimal::DomesticAnimal() : Animal(), name(nullptr) {}
+
 DomesticAnimal::DomesticAnimal(const char *region, char gender, double weight, int age, const char *name) :
                                                                         Animal(region,gender,weight,age){
     this->name = new char[strlen(name) + 1];
@@ -55,5 +57,3 @@ std::ostream &operator<<(std::ostream &os, const DomesticAnimal &da) {
     da.print(os);
     return os;
 }
-
-DomesticAnimal::DomesticAnimal() : Animal(), name(nullptr) {}
